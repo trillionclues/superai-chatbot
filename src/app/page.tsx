@@ -1,13 +1,13 @@
-import Header from '@/components/Header/Header';
-import Header2 from '@/components/Header/Header2';
+import ChatLayout from './chat/page';
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col justify-between p-5'>
-      <div className='header-container'>
-        <Header />
-        <Header2 />
-      </div>
-    </main>
+    <>
+      <main className='min-h-screen bg-white'>
+        <div className='md:px-24 pt-5 px-8'>
+          <ChatLayout />
+        </div>
+      </main>
+    </>
   );
 }

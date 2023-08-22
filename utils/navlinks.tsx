@@ -2,19 +2,19 @@ export const NavLinks = [
   {
     id: 1,
     name: 'Chat',
-    url: '/chat',
+    url: '/',
     icon: 'chat',
   },
   {
     id: 2,
     name: 'My Project',
-    url: '/myproject',
+    url: '/project',
     icon: 'myproject',
   },
   {
     id: 3,
     name: 'Brand Voice',
-    url: '/brandvoice',
+    url: '/brand',
     icon: 'brandvoice',
   },
   {
