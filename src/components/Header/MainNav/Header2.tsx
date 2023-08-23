@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import React from 'react';
 import {
   IconAvatar,
   IconNotificationsCircleOutline,
   IconSetting,
-} from '../../../utils/icons';
+} from '../../../../utils/icons';
 
 const Header2 = () => {
   return (

@@ -1,12 +1,11 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import { NavLinks } from '../../../utils/navlinks';
-import { IconLogoSass } from '../../../utils/icons';
-import { useRouter, usePathname } from 'next/navigation';
+import { NavLinks } from '../../../../utils/navlinks';
+import { IconLogoSass } from '../../../../utils/icons';
+import { usePathname } from 'next/navigation';
 
 const Header: React.FC = () => {
-  const router = useRouter();
   const pathname = usePathname();
 
   return (

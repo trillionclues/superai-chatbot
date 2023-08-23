@@ -9,17 +9,18 @@ import {
 
 const ChatResponse = () => {
   return (
-    <div className='bg-[#C8FFE0] rounded-xl p-5 w-full flex flex-row space-x-4'>
+    <div className='bg-[#C8FFE0] rounded-xl p-5 w-full flex flex-row space-x-4 shadow-md'>
       <div className='rounded-full p-2 hidden md:flex flex-row items-center justify-center space-x-2 bg-[#F6F4EB] object-cover w-12 h-12'>
         <IconLogoSass />
       </div>
       <div className='flex flex-col items-start justify-start'>
         <p className='text-sm md:text-base leading-1'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium
-          fugiat cum doloribus possimus odit, enim dicta deleniti eius officiis
-          alias! Accusantium fugiat cum doloribus possimus odit, enim dicta
-          deleniti eius officiis alias! Accusantium fugiat cum doloribus
-          possimus odit, enim dicta deleniti eius officiis alias!
+          According to the latest data analysis, the global economy is projected
+          to experience a moderate growth rate in the upcoming quarter. This
+          trend is largely attributed to the successful implementation of
+          various economic policies and increased consumer spending.
+          Additionally, advancements in technology and innovation continue to
+          drive productivity improvements across industries.
         </p>
 
         <div className='mt-5 flex justify-between w-full'>

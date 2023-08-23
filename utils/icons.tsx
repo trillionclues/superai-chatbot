@@ -78,16 +78,27 @@ export function IconEllipsisV(props: React.SVGProps<SVGSVGElement>) {
   );
 }
 
-export function IconBxsPaperPlane(props: React.SVGProps<SVGSVGElement>) {
+export function IconHouseChimneyCrack(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox='0 0 24 24'
+      viewBox='0 0 576 512'
       fill='currentColor'
       height='1em'
       width='1em'
       {...props}
     >
-      <path d='M2.6 13.083l3.452 1.511L16 9.167l-6 7 8.6 3.916a1 1 0 001.399-.85l1-15a1.002 1.002 0 00-1.424-.972l-17 8a1.002 1.002 0 00.025 1.822zM8 22.167l4.776-2.316L8 17.623z' />
+      <path d='M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H326.4L288 448l80.8-67.3c7.8-6.5 7.6-18.6-.4-24.9l-117.8-92.6c-14.6-11.5-33.8 7-22.8 22L288 368l-85.5 71.2c-6.1 5-7.5 13.8-3.5 20.5l31.4 52.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1 0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L416 100.7V64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32v121l52.8 46.4c8 7 12 15 11 24z' />
+    </svg>
+  );
+}
+
+export function IconPaperPlane(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox='0 0 24 24' fill='none' height='1em' width='1em' {...props}>
+      <path
+        fill='#fff'
+        d='M2.6 13.083l3.452 1.511L16 9.167l-6 7 8.6 3.916a1 1 0 001.399-.85l1-15a1.002 1.002 0 00-1.424-.972l-17 8a1.002 1.002 0 00.025 1.822zM8 22.167l4.776-2.316L8 17.623z'
+      />
     </svg>
   );
 }
@@ -154,6 +165,63 @@ export function IconClipboardCopy(props: React.SVGProps<SVGSVGElement>) {
       <path stroke='none' d='M0 0h24v24H0z' />
       <path d='M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h3m9-9V7a2 2 0 00-2-2h-2M13 17v-1a1 1 0 011-1h1m3 0h1a1 1 0 011 1v1m0 3v1a1 1 0 01-1 1h-1m-3 0h-1a1 1 0 01-1-1v-1' />
       <path d='M11 3 H13 A2 2 0 0 1 15 5 V5 A2 2 0 0 1 13 7 H11 A2 2 0 0 1 9 5 V5 A2 2 0 0 1 11 3 z' />
+    </svg>
+  );
+}
+
+export function IconContentSaveCogOutline(
+  props: React.SVGProps<SVGSVGElement>
+) {
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='currentColor'
+      height='1em'
+      width='1em'
+      {...props}
+    >
+      <path d='M11.1 19c.1.7.3 1.4.6 2H5c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2h12l4 4v4.7c-.6-.3-1.3-.5-2-.6V7.8L16.2 5H5v14h6.1m.9-7c-1.7 0-3 1.3-3 3 0 1.3.8 2.4 2 2.8.1-2.2 1.1-4.1 2.7-5.3-.5-.3-1.1-.5-1.7-.5m3-2V6H6v4h9m7.8 9.6l-1 1.7c-.1.1-.2.1-.3.1l-1.2-.4c-.3.2-.5.3-.8.5l-.2 1.3c0 .1-.1.2-.2.2h-2c-.1 0-.2-.1-.3-.2l-.2-1.3c-.3-.1-.6-.3-.8-.5l-1.2.5c-.1 0-.2 0-.3-.1l-1-1.7c-.1-.1 0-.2.1-.3l1.1-.8v-1l-1.1-.8c-.1-.1-.1-.2-.1-.3l1-1.7c.1-.1.2-.1.3-.1l1.2.5c.3-.2.5-.3.8-.5l.2-1.3c0-.1.1-.2.3-.2h2c.1 0 .2.1.2.2l.2 1.3c.3.1.6.3.9.5l1.2-.5c.1 0 .3 0 .3.1l1 1.7c.1.1 0 .2-.1.3l-1.1.8v1l1.1.8c.1 0 .1.1 0 .2M19.5 18c0-.8-.7-1.5-1.5-1.5s-1.5.7-1.5 1.5.7 1.5 1.5 1.5 1.5-.7 1.5-1.5z' />
+    </svg>
+  );
+}
+
+export function IconVoiceprintFill(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='currentColor'
+      height='1em'
+      width='1em'
+      {...props}
+    >
+      <path fill='none' d='M0 0h24v24H0z' />
+      <path d='M5 7h2v10H5V7zm-4 3h2v4H1v-4zm8-8h2v18H9V2zm4 2h2v18h-2V4zm4 3h2v10h-2V7zm4 3h2v4h-2v-4z' />
+    </svg>
+  );
+}
+export function IconHamburgerMenu(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg fill='none' viewBox='0 0 15 15' height='1em' width='1em' {...props}>
+      <path
+        fill='currentColor'
+        fillRule='evenodd'
+        d='M1.5 3a.5.5 0 000 1h12a.5.5 0 000-1h-12zM1 7.5a.5.5 0 01.5-.5h12a.5.5 0 010 1h-12a.5.5 0 01-.5-.5zm0 4a.5.5 0 01.5-.5h12a.5.5 0 010 1h-12a.5.5 0 01-.5-.5z'
+        clipRule='evenodd'
+      />
+    </svg>
+  );
+}
+
+export function IconClose(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox='0 0 1024 1024'
+      fill='currentColor'
+      height='1em'
+      width='1em'
+      {...props}
+    >
+      <path d='M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z' />
     </svg>
   );
 }
