@@ -19,7 +19,6 @@ const MobileNav = () => {
     };
 
     window.addEventListener('resize', updateIsMobile);
-
     return () => window.removeEventListener('resize', updateIsMobile);
   }, []);
 
@@ -38,7 +37,7 @@ const MobileNav = () => {
 
       <div
         className={`fixed top-[58px] left-[60px] right-0 bg-white bottom-0 transition-all duration-500 ease-in-out delay-150 transform overflow-hidden ${
-          isOpen ? 'translate-x-full' : ''
+          isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div>

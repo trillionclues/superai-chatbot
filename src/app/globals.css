@@ -24,10 +24,6 @@ body {
   background: rgb(247, 245, 245);
 }
 
-.blur {
-  backdrop-filter: blur(8px);
-}
-
 .space-grotesk-font {
   font-family: 'Space Grotesk', sans-serif;
 }
