@@ -5,7 +5,7 @@ import {
   IconHandThumbsUp,
   IconLogoSass,
   IconPlayListAdd,
-} from '../../../utils/icons';
+} from '../../../../utils/icons';
 
 const ChatResponse = () => {
   return (
