@@ -11,15 +11,11 @@ import {
 import { ChatQueryProps } from '../../../../types/ChatQueryProps';
 
 const ChatQuery: React.FC<ChatQueryProps> = (props) => {
-  const [isTyping, setIsTyping] = useState(false);
-
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (props.inputText.trim() === '') return;
     console.log('inputText: ', props.inputText);
-
-    // call handlechatcocmpletion
-    props.handleChatCompletion(props.inputText);
+    props.handleChatRequest(props.inputText);
   };
 
   return (
@@ -33,8 +29,8 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
         style={{ minHeight: '40px' }}
         value={props.inputText}
         onChange={(e) => props.setInputText(e.target.value)}
-        onFocus={() => setIsTyping(true)}
-        onBlur={() => setIsTyping(false)}
+        onFocus={() => props.setIsTyping(true)}
+        onBlur={() => props.setIsTyping(false)}
       />
       <div className='flex flex-row flex justify-between w-full rounded-xl mt-5 bg-[#F6F4EB]'>
         <div className='flex flex-row items-center justify-center space-x-2 p-2'>
@@ -61,7 +57,7 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
           <button
             type='submit'
             className={`text-white flex flex-row items-center justify-center space-x-2 p-2 rounded-full ${
-              isTyping
+              props.isTyping
                 ? 'bg-black cursor-pointer'
                 : 'bg-gray-300 cursor-not-allowed'
             }`}

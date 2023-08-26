@@ -4,25 +4,27 @@ import React, { useState } from 'react';
 import ChatQuery from '../ChatCompletion/ChatQuery/ChatQuery';
 import ChatQuest from '../ChatCompletion/Question/ChatQuest';
 import ChatResponse from '../ChatCompletion/Response/ChatResponse';
-import { getChatCompletion } from '../../../utils/getchatCompletion';
+import { getChatCompletion } from '../../../utils/generateResponse';
 
 const LeftLayout = () => {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSending, setIsSending] = useState(false);
 
-  const handleChatCompletion = async (inputText: string) => {
+  const handleChatRequest = async (inputText: string) => {
     setIsSending(true);
     try {
       const response = await getChatCompletion(inputText);
-      console.log('Response from Open Ai: ', response);
+      console.log('response: ', response);
+      setIsSending(false);
     } catch (error) {
-      console.log('Error', error);
+      console.log('error: ', error);
+      setIsSending(false);
     } finally {
       setTimeout(() => {
-        setIsSending(false);
         setInputText('');
-      }, 2000);
+        setIsTyping(false);
+      }, 1000);
     }
   };
 
@@ -43,8 +45,7 @@ const LeftLayout = () => {
             isTyping={isTyping}
             setIsTyping={setIsTyping}
             isSending={isSending}
-            setIsSending={setIsSending}
-            handleChatCompletion={handleChatCompletion}
+            handleChatRequest={handleChatRequest}
           />
         </div>
       </div>
