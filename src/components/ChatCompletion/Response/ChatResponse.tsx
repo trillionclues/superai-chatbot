@@ -6,8 +6,9 @@ import {
   IconLogoSass,
   IconPlayListAdd,
 } from '../../../../utils/icons';
+import { ChatReponseProps } from '../../../../types/ChatResponseProps';
 
-const ChatResponse = () => {
+const ChatResponse: React.FC<ChatReponseProps> = ({ apiResponse }) => {
   return (
     <div className='bg-[#C8FFE0] rounded-xl p-5 w-full flex flex-row space-x-4 shadow-md'>
       <div className='rounded-full p-2 hidden md:flex flex-row items-center justify-center space-x-2 bg-[#F6F4EB] object-cover w-12 h-12'>
@@ -21,6 +22,7 @@ const ChatResponse = () => {
           various economic policies and increased consumer spending.
           Additionally, advancements in technology and innovation continue to
           drive productivity improvements across industries.
+          {/* {apiResponse} */}
         </p>
 
         <div className='mt-5 flex justify-between w-full'>

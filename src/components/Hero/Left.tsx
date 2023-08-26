@@ -4,18 +4,22 @@ import React, { useState } from 'react';
 import ChatQuery from '../ChatCompletion/ChatQuery/ChatQuery';
 import ChatQuest from '../ChatCompletion/Question/ChatQuest';
 import ChatResponse from '../ChatCompletion/Response/ChatResponse';
-import { getChatCompletion } from '../../../utils/generateResponse';
+import processMessageToChatGPT from '../../../utils/generateResponse';
 
 const LeftLayout = () => {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [apiResponse, setApiResponse] = useState('');
 
   const handleChatRequest = async (inputText: string) => {
     setIsSending(true);
     try {
-      const response = await getChatCompletion(inputText);
-      console.log('response: ', response);
+      const apiResponse = await processMessageToChatGPT([
+        { sender: 'USER', message: inputText },
+      ]);
+      console.log('apiResponse: ', apiResponse);
+      setApiResponse(apiResponse);
       setIsSending(false);
     } catch (error) {
       console.log('error: ', error);
@@ -32,7 +36,7 @@ const LeftLayout = () => {
     <div className='flex flex-col flex-grow'>
       <div className='flex flex-col space-y-2'>
         <div className='flex items-start space-x-2 p-2 flex-col'>
-          <ChatResponse />
+          <ChatResponse apiResponse={apiResponse} />
           <div className='p-2 w-full flex flex-row space-x-2 items-center mt-4'>
             <ChatQuest />
           </div>
@@ -49,6 +53,7 @@ const LeftLayout = () => {
           />
         </div>
       </div>
+      {apiResponse}
     </div>
   );
 };

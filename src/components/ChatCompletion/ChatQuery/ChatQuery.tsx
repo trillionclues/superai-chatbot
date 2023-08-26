@@ -11,11 +11,13 @@ import {
 import { ChatQueryProps } from '../../../../types/ChatQueryProps';
 
 const ChatQuery: React.FC<ChatQueryProps> = (props) => {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // handle form submit
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (props.inputText.trim() === '') return;
     console.log('inputText: ', props.inputText);
-    props.handleChatRequest(props.inputText);
+    // Pass the user's message as an array to the processing function
+    await props.handleChatRequest(props.inputText);
   };
 
   return (
