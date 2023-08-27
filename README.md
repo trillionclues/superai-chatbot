@@ -16,6 +16,25 @@ This repository contains a demo UI of the [OpenAI GPT-3 API](https://openai.com/
 - [Tailwind CSS](https://tailwindcss.com/)
 - [OpenAI GPT-3 API](https://platform.openai.com/docs/api-reference/completions/create)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Vercel](https://vercel.com/)
+
+## Demo
+
+![Demo](https://superai-chatbot.vercel.app/)
+
+## Features
+
+- [x] Generate text from a prompt
+- [x] Generate text from a prompt with a temperature
+- [x] Generate text from a prompt with a temperature and a max number of tokens
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## Authors
+
+- [**@trillionclues**](https://github.com/trillionclues)
 
 ## License
 

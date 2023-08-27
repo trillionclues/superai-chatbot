@@ -1,8 +1,3 @@
-const dotenv = require('dotenv');
-dotenv.config();
-
-const API_KEY = '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';
-// const API_KEY = process.env.REACT_APP_OPENAI_API_KEY;
 async function processMessageToChatGPT(messages: any[]) {
   let apiMessages = messages.map(
     (messageObject: { sender: string; message: any }) => {
@@ -21,21 +16,21 @@ async function processMessageToChatGPT(messages: any[]) {
 
   const apiRequestBody = {
     model: 'gpt-3.5-turbo',
-    max_tokens: 50,
     messages: apiMessages,
   };
 
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization: 'Bearer ' + API_KEY,
+      Authorization:
+        'Bearer ' + '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',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(apiRequestBody),
   });
 
   const data = await response.json();
-  // console.log(data);
+  console.log(data.choices[0].message.content);
   return data.choices[0].message.content;
 }
 

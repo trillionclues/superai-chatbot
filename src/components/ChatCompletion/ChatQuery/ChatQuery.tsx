@@ -63,7 +63,6 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
                 ? 'bg-black cursor-pointer'
                 : 'bg-gray-300 cursor-not-allowed'
             }`}
-            // disabled={!isTyping}
           >
             {props.isSending ? (
               <IconLoading3Quarters className='w-6 h-6 animate-spin' />
