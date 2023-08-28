@@ -1,3 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
+// *****************************************************************
+
+// const API_KEY = process.env.OPENAI_API_KEY;
+// console.log(API_KEY);
 async function processMessageToChatGPT(messages: any[]) {
   let apiMessages = messages.map(
     (messageObject: { sender: string; message: any }) => {
@@ -23,15 +30,21 @@ async function processMessageToChatGPT(messages: any[]) {
     method: 'POST',
     headers: {
       Authorization:
-        'Bearer ' + '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',
+        'Bearer ' + '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',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(apiRequestBody),
   });
 
   const data = await response.json();
-  console.log(data.choices[0].message.content);
-  return data.choices[0].message.content;
+  console.log(data);
+  if (data.choices && data.choices.length > 0) {
+    console.log(data.choices[0]?.message.content);
+    return data.choices[0]?.message.content;
+  } else {
+    console.log('No response content found in API response.');
+    return ''; // Or handle this case accordingly
+  }
 }
 
 export default processMessageToChatGPT;
@@ -43,6 +56,7 @@ export default processMessageToChatGPT;
 // *****************************************************************
 // *****************************************************************
 
+//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
 // import openaiInstance from '../openai/openai';
 // // function to get chat completion from OpenAI
 // async function getChatCompletion(prompt: string) {

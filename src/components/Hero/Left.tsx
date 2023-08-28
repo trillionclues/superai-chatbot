@@ -5,26 +5,23 @@ import ChatQuery from '../ChatCompletion/ChatQuery/ChatQuery';
 import ChatQuest from '../ChatCompletion/Question/ChatQuest';
 import ChatResponse from '../ChatCompletion/Response/ChatResponse';
 import processMessageToChatGPT from '../../../utils/generateResponse';
-import { ConversationProps } from '../../../types/ConversationProps';
+// import { ConversationProps } from '../../../types/ConversationProps';
 
 const LeftLayout = () => {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [apiResponse, setApiResponse] = useState('');
-  const [conversation, setConversation] = useState<ConversationProps[]>([]);
+  // const [conversation, setConversation] = useState<ConversationProps[]>([]);
 
   const handleChatRequest = async (inputText: string) => {
     setIsSending(true);
     try {
-      const updatedConversation = [
-        ...conversation,
-        { sender: 'user', message: inputText },
-      ];
-      const apiResponse = await processMessageToChatGPT(updatedConversation);
+      const apiResponse = await processMessageToChatGPT([
+        { sender: 'USER', message: inputText },
+      ]);
       console.log('apiResponse: ', apiResponse);
       setApiResponse(apiResponse);
-      setConversation(updatedConversation);
       setIsSending(false);
     } catch (error) {
       console.log('error: ', error);
