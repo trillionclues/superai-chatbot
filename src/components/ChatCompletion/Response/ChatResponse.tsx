@@ -9,21 +9,40 @@ import {
 import { ChatReponseProps } from '../../../../types/ChatResponseProps';
 
 const ChatResponse: React.FC<ChatReponseProps> = ({ apiResponse }) => {
+  const responseParts = apiResponse.split('```');
+
   return (
     <div className='bg-[#C8FFE0] rounded-xl p-5 w-full flex flex-row space-x-4 shadow-md'>
       <div className='rounded-full p-2 hidden md:flex flex-row items-center justify-center space-x-2 bg-[#F6F4EB] object-cover w-12 h-12'>
         <IconLogoSass />
       </div>
       <div className='flex flex-col items-start justify-start'>
-        <p className='text-sm md:text-base leading-1'>
-          According to the latest data analysis, the global economy is projected
-          to experience a moderate growth rate in the upcoming quarter. This
-          trend is largely attributed to the successful implementation of
-          various economic policies and increased consumer spending.
-          Additionally, advancements in technology and innovation continue to
-          drive productivity improvements across industries.
-          {/* {apiResponse} */}
-        </p>
+        <div className='space-y-4'>
+          {responseParts.map((part: string, index: number) => {
+            if (index % 2 !== 0) {
+              return (
+                <pre className='bg-black p-3 rounded-lg text-white' key={index}>
+                  <code>{part}</code>
+                </pre>
+              );
+            } else {
+              // Split text into paragraphs by empty lines
+              const paragraphs = part.split('\n\n');
+              return (
+                <div key={index}>
+                  {paragraphs.map((paragraph, paraIndex) => (
+                    <div key={paraIndex}>
+                      {paraIndex > 0 && <br />}
+                      <p className='text-sm md:text-base leading-1'>
+                        {paragraph}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              );
+            }
+          })}
+        </div>
 
         <div className='mt-5 flex justify-between w-full'>
           <div className='flex items-center space-x-2'>

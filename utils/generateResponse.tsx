@@ -1,6 +1,6 @@
 // *****************************************************************
-const api = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
-console.log(api);
+// const api = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+// console.log(api);
 async function processMessageToChatGPT(messages: any[]) {
   let apiMessages = messages.map(
     (messageObject: { sender: string; message: any }) => {
