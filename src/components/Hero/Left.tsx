@@ -5,14 +5,12 @@ import ChatQuery from '../ChatCompletion/ChatQuery/ChatQuery';
 import ChatQuest from '../ChatCompletion/Question/ChatQuest';
 import ChatResponse from '../ChatCompletion/Response/ChatResponse';
 import processMessageToChatGPT from '../../../utils/generateResponse';
-// import { ConversationProps } from '../../../types/ConversationProps';
 
 const LeftLayout = () => {
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [apiResponse, setApiResponse] = useState('');
-  // const [conversation, setConversation] = useState<ConversationProps[]>([]);
 
   const handleChatRequest = async (inputText: string) => {
     setIsSending(true);

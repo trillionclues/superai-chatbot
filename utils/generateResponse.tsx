@@ -1,10 +1,6 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 // *****************************************************************
-
-// const API_KEY = process.env.OPENAI_API_KEY;
-// console.log(API_KEY);
+const api = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+console.log(api);
 async function processMessageToChatGPT(messages: any[]) {
   let apiMessages = messages.map(
     (messageObject: { sender: string; message: any }) => {
@@ -29,8 +25,7 @@ async function processMessageToChatGPT(messages: any[]) {
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: {
-      Authorization:
-        'Bearer ' + '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',
+      Authorization: 'Bearer ' + process.env.NEXT_PUBLIC_OPENAI_API_KEY,
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(apiRequestBody),
