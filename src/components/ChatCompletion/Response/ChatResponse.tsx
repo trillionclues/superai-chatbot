@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   IconClipboardCopy,
   IconHandThumbsDown,
@@ -10,6 +10,22 @@ import { ChatReponseProps } from '../../../../types/ChatResponseProps';
 
 const ChatResponse: React.FC<ChatReponseProps> = ({ apiResponse }) => {
   const responseParts = apiResponse.split('```');
+  const [copyButtonText, setCopyButtonText] = useState('Copy');
+
+  // copy apiResponse to clipboard
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(apiResponse);
+      setTimeout(() => {
+        setCopyButtonText('Copied');
+        setTimeout(() => {
+          setCopyButtonText('Copy');
+        }, 3000);
+      }, 1000);
+    } catch (error) {
+      console.log('Error copying to clipboard: ', error);
+    }
+  };
 
   return (
     <div className='bg-emerald-400 rounded-xl p-5 w-full flex flex-row space-x-4 shadow-md'>
@@ -57,13 +73,20 @@ const ChatResponse: React.FC<ChatReponseProps> = ({ apiResponse }) => {
             </button>
           </div>
           <div className='flex items-center md:space-x-5 space-x-2'>
-            <button className='bg-[#F6F4EB] rounded-full p-2 flex flex-row items-center justify-center space-x-2 text-sm font-normal'>
+            <button
+              className='bg-[#F6F4EB] rounded-full p-2 flex flex-row items-center justify-center space-x-1'
+              onClick={copyToClipboard}
+            >
               <IconClipboardCopy />{' '}
-              <span className='hidden md:inline-block'>Copy</span>
+              <span className='hidden md:inline-block text-sm font-normal'>
+                {copyButtonText}
+              </span>
             </button>
-            <button className='bg-[#F6F4EB] rounded-full md:p-2 p-1 flex flex-row items-center justify-center md:space-x-2 space-x-0 text-sm font-normal'>
+            <button className='bg-[#F6F4EB] rounded-full md:p-2 p-1 flex flex-row items-center justify-center space-x-1'>
               <IconPlayListAdd />{' '}
-              <span className='hidden md:inline-block'>Add to Editor</span>
+              <span className='hidden text-sm font-normal md:inline-block'>
+                Add to Editor
+              </span>
             </button>
           </div>
         </div>

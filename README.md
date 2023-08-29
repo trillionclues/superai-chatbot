@@ -25,6 +25,7 @@ This repository contains a demo UI of the [OpenAI GPT-3 API](https://openai.com/
 ## Features
 
 - [x] Generate text from a prompt
+- [x] Copy apiResponse to Clipboard
 - [x] Generate text from a prompt with a temperature
 - [x] Generate text from a prompt with a temperature and a max number of tokens
 

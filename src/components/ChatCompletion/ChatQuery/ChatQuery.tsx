@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+// import { webkitSpeechRecognition } from 'webspeechapi';
 import {
   IconContentSaveCogOutline,
   IconVoiceprintFill,
@@ -11,6 +12,28 @@ import {
 import { ChatQueryProps } from '../../../../types/ChatQueryProps';
 
 const ChatQuery: React.FC<ChatQueryProps> = (props) => {
+  const [isRecording, setIsRecording] = useState(false);
+  const [transcript, setTranscript] = useState('');
+
+  // const handleStartRecording = () => {
+  //   setIsRecording(true);
+  //   const recorgnition = new webkitSpeechRecognition();
+  //   recorgnition.onstart = () => {};
+  //   recorgnition.onresult = (e) => {
+  //     setTranscript(e.results[0][0]);
+  //   };
+  //   recorgnition.onerror = (e) => {
+  //     console.log(e);
+  //   };
+  //   recorgnition.start();
+  // };
+
+  // const handleStopRecording = () => {
+  //   setIsRecording(false);
+  //   const recorgnition = new webkitSpeechRecognition();
+  //   recorgnition.stop();
+  // };
+
   // handle form submit
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,10 +64,13 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
               <span className='hidden md:block mr-1'>Browse</span> Prompts
             </p>
           </div>
-          <div className='flex flex-row items-center justify-center space-x-2 md:p-2 p-1 rounded-full bg-[#fcfcfc] cursor-pointer'>
+          <div
+            className='flex flex-row items-center justify-center space-x-2 md:p-2 p-1 rounded-full bg-[#fcfcfc] cursor-pointer'
+            // onClick={handleStartRecording}
+          >
             <IconVoiceprintFill className='w-6 h-6' />
             <p className='text-sm font-normal flex flex-row'>
-              <span className='hidden md:block mr-1'>No Brand</span>Voice
+              <span className='hidden md:block mr-1'>Record</span>Voice
             </p>
           </div>
         </div>

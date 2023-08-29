@@ -136,8 +136,8 @@ export function IconPlayListAdd(props: React.SVGProps<SVGSVGElement>) {
     <svg
       fill='none'
       viewBox='0 0 24 24'
-      height='1.5em'
-      width='1.5em'
+      height='1.2em'
+      width='1.2em'
       {...props}
     >
       <path
@@ -158,8 +158,8 @@ export function IconClipboardCopy(props: React.SVGProps<SVGSVGElement>) {
       strokeLinejoin='round'
       strokeWidth={2}
       viewBox='0 0 24 24'
-      height='1.5em'
-      width='1.5em'
+      height='1.2em'
+      width='1.2em'
       {...props}
     >
       <path stroke='none' d='M0 0h24v24H0z' />
