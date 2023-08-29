@@ -37,13 +37,13 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
         <div className='flex flex-row items-center justify-center space-x-2 p-2'>
           <div className='flex flex-row items-center justify-center space-x-2 p-1 md:p-2 rounded-full bg-[#fcfcfc] cursor-pointer'>
             <IconContentSaveCogOutline className='w-6 h-6 ' />
-            <p className='text-sm md:text-base flex flex-row'>
+            <p className='text-sm font-normal flex flex-row'>
               <span className='hidden md:block mr-1'>Browse</span> Prompts
             </p>
           </div>
           <div className='flex flex-row items-center justify-center space-x-2 md:p-2 p-1 rounded-full bg-[#fcfcfc] cursor-pointer'>
             <IconVoiceprintFill className='w-6 h-6' />
-            <p className='text-sm md:text-base flex flex-row'>
+            <p className='text-sm font-normal flex flex-row'>
               <span className='hidden md:block mr-1'>No Brand</span>Voice
             </p>
           </div>
@@ -52,7 +52,7 @@ const ChatQuery: React.FC<ChatQueryProps> = (props) => {
         <div className='flex flex-row space-y x-2 p-1 md:p-2 items-center'>
           <div className='hidden md:flex flex-row items-center justify-center space-x-2 md:p-2 p-1 rounded-full bg-[#fcfcfc] cursor-pointer'>
             <IconHouseChimneyCrack className='w-6 h-6' />
-            <p className='text-sm md:text-base'>Improve</p>
+            <p className='text-sm font-normal'>Improve</p>
           </div>
 
           <button

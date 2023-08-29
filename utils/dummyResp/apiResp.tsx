@@ -1,4 +1,4 @@
-const firstPara = (
+export const firstPara = (
   <>
     The skillset you mentioned is quite extensive and may be considered too much
     to ask for from an intern, especially someone who is just starting to learn
@@ -7,7 +7,7 @@ const firstPara = (
   </>
 );
 
-const secondPara = (
+export const secondPara = (
   <>
     Instead of expecting proficiency in all of these technologies, it would be
     more reasonable to focus on a few fundamental skills that will allow the
@@ -16,4 +16,4 @@ const secondPara = (
   </>
 );
 
-export const dummTextJoinWithLineBreak = [firstPara, secondPara].join('\n\n');
+// export const dummTextJoinWithLineBreak = [firstPara, secondPara].join('\n\n');

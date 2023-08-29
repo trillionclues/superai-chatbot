@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import ChatQuery from '../ChatCompletion/ChatQuery/ChatQuery';
 import processMessageToChatGPT from '../../../utils/generateResponse';
-import { dummTextJoinWithLineBreak } from '../../../utils/dummyResp/apiResp';
+import { secondPara } from '../../../utils/dummyResp/apiResp';
 import Card from '../ChatCompletion/ChatCard/Card';
 
 const LeftLayout = () => {
