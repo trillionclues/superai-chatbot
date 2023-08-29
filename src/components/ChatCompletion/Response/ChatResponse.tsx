@@ -8,7 +8,15 @@ import {
 } from '../../../../utils/icons';
 import { ChatReponseProps } from '../../../../types/ChatResponseProps';
 
-const ChatResponse: React.FC<ChatReponseProps> = ({ apiResponse }) => {
+const ChatResponse: React.FC<ChatReponseProps> = ({
+  apiResponse,
+  chatHistory,
+}) => {
+  const getlastMessage = (chatHistory: Array<any>) => {
+    const lastMessage = chatHistory[chatHistory.length - 1];
+    return lastMessage;
+  };
+  console.log('chatHistory: ', getlastMessage);
   const responseParts = apiResponse.split('```');
   const [copyButtonText, setCopyButtonText] = useState('Copy');
 

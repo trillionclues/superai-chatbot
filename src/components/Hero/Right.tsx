@@ -6,7 +6,7 @@ const RightLayout = () => {
     <>
       <div
         className='header2 flex flex-grow-0 flex-col  items-center justify-between space-y-5 py-2 px-5 w-full'
-        style={{ height: '70%' }}
+        style={{ height: '60%' }}
       >
         {chatHistory.map((chat) => (
           <>

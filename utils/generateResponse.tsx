@@ -32,7 +32,7 @@ async function processMessageToChatGPT(messages: any[]) {
   });
 
   const data = await response.json();
-  console.log(data);
+  // console.log(data);
   if (data.choices && data.choices.length > 0) {
     console.log(data.choices[0]?.message.content);
     return data.choices[0]?.message.content;

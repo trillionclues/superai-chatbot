@@ -36,8 +36,8 @@ const MobileNav = () => {
       </div>
 
       <div
-        className={`fixed top-[58px] left-0 right-0 bg-white bottom-0 transition-all duration-500 ease-in-out delay-150 transform overflow-hidden ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-[58px] left-[90px] right-0 bg-white bottom-0 transition-all duration-500 ease-in-out delay-150 transform overflow-hidden ${
+          isOpen ? 'translate-x-0' : 'translate-x-[100%] origin-left'
         }`}
       >
         <div>

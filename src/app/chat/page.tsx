@@ -6,7 +6,7 @@ import { IconEllipsisV, IconBook, IconLogoSass } from '../../../utils/icons';
 const ChatLayout = () => {
   return (
     <main className='flex-col md:flex-row flex w-full justify-between md:space-x-5 space-x-0 md:space-y-0 space-y-5'>
-      <section className='header1 rounded-xl border-2'>
+      <section className='header1 rounded-xl border-2 h-full'>
         <div className='bg-[#F6F4EB] px-3 py-2 flex justify-between'>
           <h1 className='font-bold text-lg'>Super Chat</h1>
           <div className='flex items-center space-x-5'>
@@ -18,7 +18,7 @@ const ChatLayout = () => {
         <LeftLayout />
       </section>
 
-      <section className='header2'>
+      <section className='header2 h-full'>
         <div className='bg-[#F6F4EB] px-3 py-2 flex justify-between rounded-t-xl border-2'>
           <h1 className='font-bold text-lg'>Chat History</h1>
           <div className='flex items-center space-x-5'>
@@ -31,12 +31,7 @@ const ChatLayout = () => {
           <div className='rounded-b-xl border-2'>
             <RightLayout />
           </div>
-          <div
-            className='header3 mt-2 rounded-xl border-0 shadow-md bg-emerald-400
-            flex flex-col justify-between items-center space-y-2 py-2 px-5 w-full
-            '
-            style={{ height: '31%' }}
-          >
+          <div className='mt-2 rounded-xl border-0 shadow-md bg-emerald-400 flex flex-col justify-between items-center space-y-2 py-5 px-5 w-full'>
             <div className='text-white flex flex-row justify-between items-center space-x-2 w-full'>
               <div>
                 <IconLogoSass />

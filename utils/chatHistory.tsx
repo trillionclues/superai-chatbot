@@ -18,10 +18,4 @@ export const chatHistory = [
     question:
       'Generate a script that will create a new database and user in MySQL.',
   },
-  {
-    id: 4,
-    icon: <IconIconChat />,
-    question:
-      'Write a persuasive email to your manager explaining why you deserve a raise.',
-  },
 ];
